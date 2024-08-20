@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #3b353c;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+}
+.rowCount,
+.columnCount,
+.mineCount {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.card-form input {
+  padding: 5px;
+  outline: none;
+  margin-top: 5px;
+}
+.card-form button {
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #9c00cc;
+}
+p.result {
+  margin: 20px 0 0px 10px;
+}
+.game {
+  background-color: #3c3b48;
+  width: 500px;
+  /* height: 500px; */
+  display: flex;
+  gap: 1px;
+  flex-wrap: wrap;
+  display: grid;
+  width: max-content;
+  height: max-content;
+}
+.game .square {
+  background-color: #343340;
+  background-color: rebeccapurple;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.square.flag::before {
+  content: "🚩";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+}
+.square.mine::before {
+  content: "💣";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  background-color: #3b353c;
+}
+
+.square-clicked {
+  color: #fff;
+  background-color: #472f5f !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
